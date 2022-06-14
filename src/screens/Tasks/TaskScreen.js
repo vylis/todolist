@@ -7,14 +7,13 @@ import FloatingButton from "../../components/FloatingButton";
 import Counter from "../../components/Counter";
 
 import { useSelector, useDispatch } from "react-redux";
-import { getTasks } from "../../redux/selectors";
-import { toggleTask, deleteTask } from "../../redux/actions";
+import { getTasks } from "../../redux//selectors/selectors";
+import { toggleTask, deleteTask } from "../../redux/actions/taskAction";
 
-export default function TasksScreen() {
+const TaskScreen = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
 
   const tasks = useSelector(getTasks);
-  console.log("all tasks", tasks);
   const dispatch = useDispatch();
 
   const renderItem = ({ item }) => {
@@ -63,7 +62,7 @@ export default function TasksScreen() {
       <FloatingButton toggle={_toggleForm} isOpen={isFormVisible} />
     </>
   );
-}
+};
 
 const styles = StyleSheet.create({
   containerCounter: {
@@ -73,3 +72,5 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
 });
+
+export default TaskScreen;

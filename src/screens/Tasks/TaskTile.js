@@ -1,7 +1,7 @@
 import React from "react";
 import { Pressable, View, Text, Image, StyleSheet } from "react-native";
 
-export default function TaskTile({ task, onUpdateTask, onDeleteTask }) {
+const TaskTile = ({ task, onUpdateTask, onDeleteTask }) => {
   const onChangeStatus = () => {
     onUpdateTask(task.id);
   };
@@ -31,7 +31,7 @@ export default function TaskTile({ task, onUpdateTask, onDeleteTask }) {
       </Pressable>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -50,3 +50,5 @@ const styles = StyleSheet.create({
     height: 26,
   },
 });
+
+export default TaskTile;

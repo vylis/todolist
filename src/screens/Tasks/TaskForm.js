@@ -2,9 +2,9 @@ import { React, useState } from "react";
 import { TextInput, StyleSheet, Button, View } from "react-native";
 import { useDispatch } from "react-redux";
 
-import { addTask } from "../../redux/actions";
+import { addTask } from "../../redux/actions/taskAction";
 
-export default function TaskForm() {
+const TaskForm = () => {
   const [newTitle, setNewTitle] = useState("");
   const dispatch = useDispatch();
 
@@ -30,7 +30,7 @@ export default function TaskForm() {
       <Button title="Ajouter" onPress={onAddNewTask} color="blue" />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -48,3 +48,5 @@ const styles = StyleSheet.create({
     height: 40,
   },
 });
+
+export default TaskForm;

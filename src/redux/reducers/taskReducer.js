@@ -1,6 +1,6 @@
-import { ADD_TASK, TOGGLE_TASK, DELETE_TASK } from "../actions/actionsType";
+import { ADD_TASK, TOGGLE_TASK, DELETE_TASK } from "../actions/index";
 
-//reducers
+//taskList
 const initialState = [];
 
 export const tasksList = (state = initialState, action) => {

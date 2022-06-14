@@ -1,25 +1,6 @@
-import { ADD_TASK, TOGGLE_TASK, DELETE_TASK } from "./actionsType";
+//actions type
 
-//actions
-
-//ADD_TASK
-export function addTask(title) {
-  return {
-    type: ADD_TASK,
-    payload: {
-      title: title,
-    },
-  };
-}
-
-//TOGGLE_TASK
-export const toggleTask = (id) => ({
-  type: TOGGLE_TASK,
-  payload: { id },
-});
-
-//DELETE_TASK
-export const deleteTask = (id) => ({
-  type: DELETE_TASK,
-  payload: { id },
-});
+//tasks
+export const ADD_TASK = "ADD_TASK";
+export const TOGGLE_TASK = "TOGGLE_TASK";
+export const DELETE_TASK = "DELETE_TASK";
